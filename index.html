@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontra o Tobias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu inicial -->
+    <div id="menu-inicial">
+        <h1>Bem-vindo ao Encontra o Tobias!</h1>
+        <button id="jogar">Jogar</button>
+        <button id="instrucoes">Instruções</button>
+    </div>
+
+    <!-- Modal de instruções -->
+    <div id="modal-instrucoes">
+        <div class="modal-content">
+            <p>Encontra todos os gatos escondidos no cenário! Navega pelo ambiente horizontalmente para os encontrar.</p>
+            <button id="fechar-instrucoes">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Contêiner do jogo -->
+    <div id="nivel-container">
+        <!-- O background e os gatos serão adicionados dinamicamente pelo game.js -->
+    </div>
+
+    <script src="game.js" defer></script>
+</body>
+</html>

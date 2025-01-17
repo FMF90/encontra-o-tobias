@@ -1,0 +1,123 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Impede o scroll horizontal fora do jogo */
+}
+
+/* Menu inicial */
+#menu-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#menu-inicial h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#menu-inicial button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+#menu-inicial button:hover {
+    background-color: #eeeeee;
+}
+
+/* Modal de instruções */
+#modal-instrucoes {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 10;
+}
+
+#modal-instrucoes p {
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+#modal-instrucoes button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+#modal-instrucoes button:hover {
+    background-color: #0056b3;
+}
+
+/* Container do jogo */
+#nivel-container {
+    display: none;
+    position: relative;
+    width: 100vw; /* A largura inicial corresponde à largura do viewport */
+    height: 100vh; /* A altura fixa corresponde à altura do viewport */
+    overflow-x: scroll; /* Permite scroll horizontal */
+    overflow-y: hidden; /* Remove scroll vertical */
+    background-color: #f1f1f1;
+}
+
+/* Background */
+.background {
+    display: block;
+    height: 100vh; /* Ocupa 100% da altura do container */
+    width: auto; /* Ajusta a largura proporcionalmente à altura */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.gato {
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.2s;
+    width: 8%; /* Aumenta o tamanho dos gatos (ajusta conforme necessário) */
+    transform: translate(-50%, -50%);
+}
+
+.gato:hover {
+    transform: scale(1.2);
+}
+
+/* Contador de encontrados */
+#contador {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 10;
+}
+
